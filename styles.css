@@ -225,8 +225,50 @@ footer ul li{
     border-top: 1px solid #ddd;
 }
 
+
         /* Responsive adjustments */
-        @media (max-width: 992px) {
+        
+@media (max-width: 768px) {
+    body{
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0 15px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section{
+        padding: 30px 0;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /*Card adjustments*/
+    .card{
+        margin-bottom: 20px;
+    }
+
+    /*Program List*/
+
+    card{
+        margin-bottom: 20px;
+    }
+
+    /*Program List*/
+    ul{
+        padding-left: 20px;
+    }
+
+    /*Button sizing*/
+
+    btn{
+        display:block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
             .hero-section, .programs-section {
                 min-height: auto;
                 padding: 4rem 0;
@@ -242,9 +284,14 @@ footer ul li{
             }
         }
 
-        @media (max-width: 768px) {
-            .action-buttons .btn {
-                width: 100%;
-                margin-bottom: 0.5rem;
-            }
+    /*For very Small screens*/
+    @media (max-width: 480px){
+        h1{
+            font-size: 1.8rem;
         }
+
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+        
