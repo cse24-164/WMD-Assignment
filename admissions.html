@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="images/kindergarten.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/kindergarten.ico" type="image/x-icon">
     </head>
     <body>
 
@@ -19,14 +21,127 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="admissions.html">Admissions</a></li>
                 <li><a href="programs.html">Programs</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-        
+
+    <main>
+        <section class="about-hero">
+            <h1>Admissions</h1>
+            <p>Join the Pidipidi Kindergarten Community and Provide your Child with Quality education in a nurturing environment.</p>
+        </section>
+
     
+        <div class="admissions-card">
+        <h1>Admission Requirements</h1>
+        <p class="admission-info">
+            Admissions are open for children from 18 months to 5 years. 
+            Your child can be enrolled at any time of the year.
+        </p>
+        
+        <h2>Registration Documents</h2>
+        <p>To register, bring your child to our facilities and come prepared with:</p>
+        
+        <ul class="document-list">
+            <li class="document-item">
+                <img src="images/document-icon.svg" alt="Document icon">
+                <span>Birth certificate</span>
+            </li>
+            <li class="document-item">
+                <img src="images/document-icon.svg" alt="Document icon">
+                <span>Clinic card</span>
+            </li>
+            <li class="document-item">
+                <img src="images/document-icon.svg" alt="Document icon">
+                <span>ID/Passport for the registering parent/guardian</span>
+            </li>
+        </ul>
+        </div>
+</head>
+<body>
+    <div class="header-card">
+        <h1>2025 Fee Structure</h1>
+    
+
+    <div class="fee-cards-container">
+        <!-- Registration Card -->
+        <div class="fee-card">
+            <h2>Registration</h2>
+            <div class="fee-item">
+                <span class="fee-amount">P200</span> (non-refundable)
+            </div>
+            
+            <h3>Reservation Fees:</h3>
+            <div class="fee-item">
+                Nursery: <span class="fee-amount">P500</span>
+            </div>
+            <div class="fee-item">
+                Reception: <span class="fee-amount">P1000</span>
+            </div>
+            <p class="note">Secure a spot for your child in our classes.</p>
+        </div>
+
+        <!-- Nursery Card -->
+        <div class="fee-card">
+            <h2>Nursery</h2>
+            <p>18 months - 3 years</p>
+            
+            <div class="fee-item">
+                Full Day: <span class="fee-amount">[P4 900]</span>
+            </div>
+            <div class="fee-item">
+                Half Day: <span class="fee-amount">[P3 800]</span>
+            </div>
+            <p class="note">Fees are payable per term</p>
+        </div>
+
+        <!-- Reception Card -->
+        <div class="fee-card">
+            <h2>Reception</h2>
+            <p>3 - 4 years</p>
+            
+            <div class="fee-item">
+                Full Day Only: <span class="fee-amount">[P 5400]</span>
+            </div>
+            <p class="note">Fees are payable per term</p>
+        </div>
+    </div>
+    </div>
+
+    <!-- Extra Activities Card -->
+    <div class="activities-card">
+        <h2>Extra Activities (Per Term)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Swimming</th>
+                    <th>Computers</th>
+                    <th>Potty Training</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P400 once a week</td>
+                    <td>P300 per month</td>
+                    <td>P300 per month</td>
+                
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    
+        
+
+
+    
+        
+    </main>
+
     <footer>
         <div class="footer-container">
             <!-- Kindergarten Info -->
@@ -79,7 +194,57 @@
             <p>&COPY; All Rights Reserved. Mai 2025</p>
         </div>
     </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+
+    <script>
+    // Highlight active navigation link
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('nav a');
         
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+                
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+                
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    //Mobile Responsiveness
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '☰';
+    document.querySelector('header').appendChild(menuToggle);
+    
+    menuToggle.addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('show');
+    });
+});
+
+
+    </script> 
         <script src="" async defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     </body>
