@@ -146,8 +146,11 @@ h1{
         
 .buttons {
     display: flex;
+    justify-content: center;
     gap: 15px;
     margin-top: 30px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .buttons a{
@@ -1085,9 +1088,9 @@ footer h3{
         gap: 12px;               /* less gap vertically */
         margin-top: 20px;
         margin-bottom: 30px;
+        align-items: center;
     }
     
-    .buttons a, 
     .admissions-button,
     .contact-button {
         padding: 15px 20px;
@@ -1095,6 +1098,11 @@ footer h3{
         min-width: 100%;   /* full width buttons on mobile */
     }
    
+    .buttons a{
+        width: 80%;
+        max-width: 280px;
+        text-align: center;
+    }
     
     nav ul {
         position: fixed;
