@@ -301,7 +301,7 @@
 
     //Mobile Responsiveness
 
-    document.addEventListener('DOMContentLoaded', function() {
+   document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.createElement('div');
     menuToggle.className = 'menu-toggle';
     menuToggle.innerHTML = '☰';
@@ -319,15 +319,7 @@
             nav.classList.remove('show');
         }
     });
-    
-    // Close menu when clicking a nav link
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('show');
-        });
-    });
 });
-
     </script>
         <script src="" async defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
