@@ -1085,16 +1085,23 @@ footer ul li{
     }
 
     .section-one-text{
-        padding: 0 20px;
+        order: 2;
+        padding: 20px;
         max-width: 100%;
         margin-left: 0;
-        order: 2;
 
+    }
+
+    .staff-image{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
     }
     
     .hero-image {
-        height: 300px;
-        margin: 0 0 020px 0;
+        height: auto;
+        min-height: 300px;
+        margin: 0;
         order: 1;
     }
 

@@ -201,12 +201,15 @@
 
     //Mobile Responsiveness
 
-    document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.createElement('div');
-    menuToggle.className = 'menu-toggle';
-    menuToggle.innerHTML = '☰';
-    document.querySelector('header').appendChild(menuToggle);
-    
+document.addEventListener('DOMContentLoaded', function() {
+    //Creating hamburger menu button
+    if(document.querySelector('.menu-toggle')){
+        const menuToggle = document.createElement('div');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.innerHTML = '☰';
+        document.querySelector('header').appendChild(menuToggle);
+    }
+    const menuToggle = document.querySelector('.menu-toggle')
     const nav = document.querySelector('nav ul');
     
     menuToggle.addEventListener('click', function() {
@@ -215,7 +218,9 @@
     
     // Close menu when clicking outside or on a link
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('nav') && !e.target.classList.contains('menu-toggle')) {
+        if (!e.target.closest('nav') && 
+            !e.target.classList.contains('menu-toggle') &&
+            !e.target.closest('.menu-toggle')){
             nav.classList.remove('show');
         }
     });
