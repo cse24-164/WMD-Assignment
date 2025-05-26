@@ -1,5 +1,5 @@
-<!DOCTYPE <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
 
     <main>
         <section style="background-color: #f8f8f8;" class="about-hero">
-            <h1>Admissions</h1>
+            <h2>Admissions</h2>
             <p>Join the Pidipidi Kindergarten Community and Provide your Child with Quality education in a nurturing environment.</p>
         </section>
 
@@ -150,132 +150,131 @@
 
 <div id="admissionFormWrapper" style="display: none;">
         
-        <section class="admissions-form-section">
+    <section class="admissions-form-section">
         <h2>Admission Inquiry Form</h2>
         <form class="admissionForm">
             <!-- Student Info -->
-      <h4>Student Information</h4>
-      <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <div style="flex: 1;">
-          <label for="first-name">First Name*</label>
-          <input type="text" id="first-name" name="first-name" required>
-        </div>
-        <div style="flex: 1;">
-          <label for="last-name">Last Name*</label>
-          <input type="text" id="last-name" name="last-name" required>
-        </div>
-        <div style="flex: 1;">
-          <label for="dob">Date of Birth*</label>
-          <input type="date" id="dob" name="dob" required>
-        </div>
-        <div style="flex: 1;">
-          <label for="age">Age Group*</label>
-          <input type="text" id="age" name="age-group" required>
-        </div>
-      </div>
+            <h4>Student Information</h4>
+            <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1;">
+                    <label for="first-name">First Name*</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="last-name">Last Name*</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="dob">Date of Birth*</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age-group" required>
+                </div>
+            </div>
 
-      <!-- Parent Info -->
-      <h4 style="margin-top: 30px;">Parent/Guardian Information</h4>
-      <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <div style="flex: 1;">
-          <label for="guardian-name">Parent/Guardian Name*</label>
-          <input type="text" id="guardian-name" name="guardian-name" required>
-        </div>
-        <div style="flex: 1;">
-          <label for="relationship">Relationship to Student*</label>
-          <input type="text" id="relationship" name="relationship" required>
-        </div>
-        <div style="flex: 1;">
-          <label for="email">Email Address*</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div style="flex: 1;">
-          <label for="phone">Phone Number*</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div style="flex: 1 0 100%;">
-          <label for="address">Address</label>
-          <input type="text" id="address" name="address">
-        </div>
-        <div style="flex: 1 0 100%;">
-          <label for="current-school">Current School (if applicable)</label>
-          <input type="text" id="current-school" name="current-school">
-        </div>
-      </div>
+            <!-- Parent Info -->
+            <h4 style="margin-top: 30px;">Parent/Guardian Information</h4>
+            <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1;">
+                    <label for="guardian-name">Parent/Guardian Name*</label>
+                    <input type="text" id="guardian-name" name="guardian-name" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="relationship">Relationship to Student*</label>
+                    <input type="text" id="relationship" name="relationship" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div style="flex: 1;">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div style="flex: 1 0 100%;">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                <div style="flex: 1 0 100%;">
+                    <label for="current-school">Current School (if applicable)</label>
+                    <input type="text" id="current-school" name="current-school">
+                </div>
+            </div>
 
-      <!-- Program Selection -->
-      <h4 style="margin-top: 30px;">Program Selection</h4>
-      <div class="form-row" style="margin-bottom: 20px;">
-        <label for="program">Program Type (Nursery Only)</label>
-        <select id="program" name="program">
-          <option value="" disabled selected>Select the program type</option>
-          <option value="half-day">Half Day</option>
-          <option value="full-day">Full Day</option>
-        </select>
-      </div>
+            <!-- Program Selection -->
+            <h4 style="margin-top: 30px;">Program Selection</h4>
+            <div class="form-row" style="margin-bottom: 20px;">
+                <label for="program">Program Type (Nursery Only)</label>
+                <select id="program" name="program">
+                    <option value="" disabled selected>Select the program type</option>
+                    <option value="half-day">Half Day</option>
+                    <option value="full-day">Full Day</option>
+                </select>
+            </div>
 
-      <!-- Extra Activities -->
-      <h4>Extra Activities (Select all that apply)</h4>
-      <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
-        <label><input type="checkbox" name="activities" value="swimming"> Swimming</label>
-        <label><input type="checkbox" name="activities" value="computers"> Computers</label>
-        <label><input type="checkbox" name="activities" value="potty-training"> Potty Training (for Nursery)</label>
-      </div>
+            <!-- Extra Activities -->
+            <h4>Extra Activities (Select all that apply)</h4>
+            <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+                <label><input type="checkbox" name="activities" value="swimming"> Swimming</label>
+                <label><input type="checkbox" name="activities" value="computers"> Computers</label>
+                <label><input type="checkbox" name="activities" value="potty-training"> Potty Training (for Nursery)</label>
+            </div>
 
-      <!-- Comments -->
-      <div class="form-row" style="margin-bottom: 20px;">
-        <label for="comments">Additional Comments or Questions</label>
-        <textarea id="comments" name="comments" rows="4" style="width: 100%;"></textarea>
-      </div>
+            <!-- Comments -->
+            <div class="form-row" style="margin-bottom: 20px;">
+                <label for="comments">Additional Comments or Questions</label>
+                <textarea id="comments" name="comments" rows="4" style="width: 100%;"></textarea>
+            </div>
 
-      <!-- Confirmation -->
-      <div class="form-row" style="margin-bottom: 20px;">
-        <label>
-          <input type="checkbox" required>
-          I confirm that I have read and understood the registration requirements and fee structure.
-        </label>
-      </div>
+            <!-- Confirmation -->
+            <div class="form-row" style="margin-bottom: 20px;">
+                <label>
+                <input type="checkbox" required>
+                I confirm that I have read and understood the registration requirements and fee structure.
+                </label>
+            </div>
 
-      <!-- Submit -->
-      <div class="submit-container" style="text-align: center; margin-top: 30px;">
-        <button type="submit" class="admissions-button">Submit Inquiry</button>
-    </div>
+            <!-- Submit -->
+            <div class="submit-container" style="text-align: center; margin-top: 30px;">
+                <button type="submit" class="admissions-button">Submit Inquiry</button>
+            </div>
 
-    </form>
+        </form>
+    </section>
 
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Form submission handler
-    const admissionForm = document.querySelector(".admissionForm");
-    if (admissionForm) {
-        admissionForm.addEventListener("submit", function(e) {
-            e.preventDefault();
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Form submission handler
+        const admissionForm = document.querySelector(".admissionForm");
+        if (admissionForm) {
+            admissionForm.addEventListener("submit", function(e) {
+                e.preventDefault();
             
-            // Simple validation
-            const requiredFields = document.querySelectorAll('.admissionForm [required]');
-            let isValid = true;
+                // Simple validation
+                const requiredFields = document.querySelectorAll('.admissionForm [required]');
+                let isValid = true;
             
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    field.style.borderColor = 'red';
-                    isValid = false;
-                } else {
-                    field.style.borderColor = '';
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = 'red';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = '';
+                    }
+             });
+            
+                if (isValid) {
+                    window.location.href = "thank_you.html";
                 }
             });
-            
-            if (isValid) {
-                window.location.href = "thank_you.html";
-            }
+        }
         });
-    }
-});
-</script>
-
+        </script>
+        </div>
     </div>
 
-    </div>
-  </div>
     </main>
  <footer>
         <div class="footer-container">
@@ -314,10 +313,10 @@ document.addEventListener("DOMContentLoaded", function() {
             <!-- Programs -->
             <div class="footer-column">
                 <h3>Hours</h3>
-                <div id="contact-info">
+                <div class="footer-contact-info">
                     <ul>
                         <li> Mon - Fri: 7:00 a.m - 5:00p.m</li>
-                        <li> Sat & Sun: Closed</a></li>
+                        <li> Sat & Sun: Closed</li>
                     </ul>
                 </div>
             </div>
@@ -390,7 +389,6 @@ document.addEventListener("DOMContentLoaded", function() {
    
 
     </script> 
-        <script src="" async defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     </body>
 </html>
