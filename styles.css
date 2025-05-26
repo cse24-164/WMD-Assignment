@@ -1079,12 +1079,12 @@ footer ul li{
         padding: 30px 0;
     }
 
-    .section-one-content {
+    .section-one-content, .programs-content {
         flex-direction: column;
         min-height: auto;
     }
 
-    .section-one-text{
+    .section-one-text, .programs-text{
         order: 2;
         padding: 20px;
         max-width: 100%;
@@ -1098,12 +1098,12 @@ footer ul li{
         aspect-ratio: 1/1;
     }
     
-    .hero-image {
-        height: auto;
-        min-height: 300px;
-        margin: 0;
+    .hero-image, .programs-image{
         order: 1;
+        margin-right: 0;
+        margin-left: 0;
     }
+
 
     /*Card Layouts*/
 
