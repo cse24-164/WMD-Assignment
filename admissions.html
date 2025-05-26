@@ -28,17 +28,87 @@
         </nav>
 
         <!-- Register Now Button -->
-        <a href="#admissionFormWrapper" class="admissions-button" style="background-color: red;">Register Now</a>
+        <a href="#admissionFormWrapper" class="nav-register-btn">Register Now</a>
     </header>
 
     <main>
-        <section class="about-hero">
+        <section style="background-color: #f8f8f8;" class="about-hero">
             <h1>Admissions</h1>
             <p>Join the Pidipidi Kindergarten Community and Provide your Child with Quality education in a nurturing environment.</p>
         </section>
 
+    <div class="header-card">
+        <h1>2025 Fee Structure</h1>
     
-        <div class="admissions-card">
+
+    <div class="fee-cards-container">
+        <!-- Registration Card -->
+        <div class="fee-card">
+            <h2>Registration</h2>
+            <div class="fee-item">
+                <span class="fee-amount">P200</span> (non-refundable)
+            </div>
+            
+            <h3>Reservation Fees:</h3>
+            <div class="fee-item">
+                Nursery: <span class="fee-amount">P500</span>
+            </div>
+            <div class="fee-item">
+                Reception: <span class="fee-amount">P1000</span>
+            </div>
+            <p class="note">Secure a spot for your child in our classes.</p>
+        </div>
+
+        <!-- Nursery Card -->
+        <div class="fee-card">
+            <h2>Nursery</h2>
+            <p>18 months - 3 years</p>
+            
+            <div class="fee-item">
+                Full Day: <span class="fee-amount">P4 900</span>
+            </div>
+            <div class="fee-item">
+                Half Day: <span class="fee-amount">P3 800</span>
+            </div>
+            <p class="note">Fees are payable per term</p>
+        </div>
+
+        <!-- Reception Card -->
+        <div class="fee-card">
+            <h2>Reception</h2>
+            <p>4 - 5 years</p>
+            
+            <div class="fee-item">
+                Full Day ONLY: <span class="fee-amount">P 5400</span>
+            </div>
+            <p class="note">Fees are payable per term</p>
+        </div>
+    
+
+    <!-- Extra Activities Card -->
+    
+    <div class="fee-card">
+        <h2>Extra Activities</h2>
+
+        <div class="fee-item">
+                Weekly Swimming Session:<span class="fee-amount">P300</span>
+        </div>
+        <div class="fee-item">
+                Bi-Weekly Swimming Sessions:<span class="fee-amount">P400 </span>
+        </div>
+        <div class="fee-item">
+                Computers: <span class="fee-amount">P400 </span>
+        </div>
+        <div class="fee-item">
+                Potty-Training: <span class="fee-amount">P300</span>
+        </div>
+            <p class="note">Fees are payable per month</p>
+        </div>
+    </div>
+                    
+    </div>
+
+    <div class="admissions-card">
         <h1 style="text-align: center;">Admission Process </h1>
         <p class="admission-info">
             Admissions are open for children from 18 months to 5 years. 
@@ -78,7 +148,7 @@
     });
 </script>
 
-        <div id="admissionFormWrapper" style="display: none;">
+<div id="admissionFormWrapper" style="display: none;">
         
         <section class="admissions-form-section">
         <h2>Admission Inquiry Form</h2>
@@ -174,88 +244,38 @@
     </form>
 
     <script>
-  document.getElementById("admissionForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent actual form submission
-    // Optional: Add validation or animation here
-    window.location.href = "thank_you.html"; // Redirect
-  });
+document.addEventListener("DOMContentLoaded", function() {
+    // Form submission handler
+    const admissionForm = document.querySelector(".admissionForm");
+    if (admissionForm) {
+        admissionForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const requiredFields = document.querySelectorAll('.admissionForm [required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (isValid) {
+                window.location.href = "thank_you.html";
+            }
+        });
+    }
+});
 </script>
 
     </div>
 
     </div>
   </div>
-</section>
-    <div class="header-card">
-        <h1>2025 Fee Structure</h1>
-    
-
-    <div class="fee-cards-container">
-        <!-- Registration Card -->
-        <div class="fee-card">
-            <h2>Registration</h2>
-            <div class="fee-item">
-                <span class="fee-amount">P200</span> (non-refundable)
-            </div>
-            
-            <h3>Reservation Fees:</h3>
-            <div class="fee-item">
-                Nursery: <span class="fee-amount">P500</span>
-            </div>
-            <div class="fee-item">
-                Reception: <span class="fee-amount">P1000</span>
-            </div>
-            <p class="note">Secure a spot for your child in our classes.</p>
-        </div>
-
-        <!-- Nursery Card -->
-        <div class="fee-card">
-            <h2>Nursery</h2>
-            <p>18 months - 3 years</p>
-            
-            <div class="fee-item">
-                Full Day: <span class="fee-amount">P4 900</span>
-            </div>
-            <div class="fee-item">
-                Half Day: <span class="fee-amount">P3 800</span>
-            </div>
-            <p class="note">Fees are payable per term</p>
-        </div>
-
-        <!-- Reception Card -->
-        <div class="fee-card">
-            <h2>Reception</h2>
-            <p>4 - 5 years</p>
-            
-            <div class="fee-item">
-                Full Day ONLY: <span class="fee-amount">P 5400</span>
-            </div>
-            <p class="note">Fees are payable per term</p>
-        </div>
-    
-
-    <!-- Extra Activities Card -->
-    
-    <div class="fee-card">
-        <h2>Extra Activities</h2>
-
-        <div class="fee-item">
-                Weekly Swimming Session:<span class="fee-amount">P300</span>
-        </div>
-        <div class="fee-item">
-                Bi-Weekly Swimming Sessions:<span class="fee-amount">P400 </span>
-        </div>
-        <div class="fee-item">
-                Computers: <span class="fee-amount">P400 </span>
-        </div>
-        <div class="fee-item">
-                Potty-Training: <span class="fee-amount">P300</span>
-        </div>
-            <p class="note">Fees are payable per month</p>
-        </div>
-    </div>
-                    
-    </div>
     </main>
  <footer>
         <div class="footer-container">
