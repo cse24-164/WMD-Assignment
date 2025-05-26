@@ -27,13 +27,14 @@ body{
 }
 
 header{
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
     background-color: white;
     box-shadow: 0 2px 5px rgba(170, 161, 161, 0.1);
-    position: relative;
     z-index: 100;
 }
 
@@ -989,6 +990,14 @@ footer ul li{
         z-index: 101;
         padding: 10px;
     }
+
+    .pidipidi-logo {
+      font-size: 1.2rem;
+    }
+
+    .pidipidi-logo .kindergarten {
+      font-size: 1.0rem;
+    }
    
     
     nav ul {
@@ -999,7 +1008,7 @@ footer ul li{
         display: none;
         flex-direction: column;
         width: 100%;
-        background: white;
+        background:white;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         max-height: 0;
         overflow: hidden;
@@ -1010,6 +1019,7 @@ footer ul li{
     nav ul.show {
         max-height: 400px;
         padding: 10px 20;
+        display: flex;
     }
     
     nav li {
@@ -1076,6 +1086,15 @@ footer ul li{
         order: 1;
         margin-right: 0;
         margin-left: 0;
+        height: auto;
+        max-height: 300px;
+    }
+
+    .hero-image img{
+        height: auto;
+        min-height: unset;
+        width: 100%;
+        position: static;
     }
 
 
