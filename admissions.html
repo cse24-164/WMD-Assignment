@@ -232,17 +232,34 @@
     });
 
     //Mobile Responsiveness
+
     document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.createElement('div');
     menuToggle.className = 'menu-toggle';
     menuToggle.innerHTML = '☰';
     document.querySelector('header').appendChild(menuToggle);
     
+    const nav = document.querySelector('nav ul');
+    
     menuToggle.addEventListener('click', function() {
-        document.querySelector('nav ul').classList.toggle('show');
+        nav.classList.toggle('show');
+    });
+    
+    // Close menu when clicking outside or on a link
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav') && !e.target.classList.contains('menu-toggle')) {
+            nav.classList.remove('show');
+        }
+    });
+    
+    // Close menu when clicking a nav link
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('show');
+        });
     });
 });
-
+   
 
     </script> 
         <script src="" async defer></script>
