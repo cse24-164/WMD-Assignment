@@ -26,6 +26,9 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+
+        <!-- Register Now Button -->
+        <a href="#admissionFormWrapper" class="admissions-button" style="background-color: red;">Register Now</a>
     </header>
 
     <main>
@@ -36,14 +39,13 @@
 
     
         <div class="admissions-card">
-        <h1>Admission Requirements</h1>
+        <h1>Admission Process</h1>
         <p class="admission-info">
             Admissions are open for children from 18 months to 5 years. 
             Your child can be enrolled at any time of the year.
         </p>
-        
-        <h2>Registration Documents</h2>
-        <p>To register, bring your child to our facilities and come prepared with:</p>
+        <p> To begin the admission process, register below.</p> 
+        <p>Once you hear back from us, bring your child to our facilities and come prepared with:</p>
         
         <ul class="document-list">
             <li class="document-item">
@@ -59,9 +61,131 @@
                 <span>ID/Passport for the registering parent/guardian</span>
             </li>
         </ul>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <button id="showFormBtn" class="admissions-button">Register</button>
         </div>
-</head>
-<body>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const showFormBtn = document.getElementById("showFormBtn");
+        const formWrapper = document.getElementById("admissionFormWrapper");
+
+        showFormBtn.addEventListener("click", function () {
+        formWrapper.style.display = formWrapper.style.display === "block" ? "none" : "block";
+        showFormBtn.textContent = formWrapper.style.display === "block" ? "Hide Form" : "Register for Admission";
+        });
+    });
+</script>
+
+        <div id="admissionFormWrapper" style="display: none;">
+        
+        <section class="admissions-form-section">
+        <h2>Admission Inquiry Form</h2>
+        <form class="admissionForm">
+            <!-- Student Info -->
+      <h4>Student Information</h4>
+      <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1;">
+          <label for="first-name">First Name*</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div style="flex: 1;">
+          <label for="last-name">Last Name*</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div style="flex: 1;">
+          <label for="dob">Date of Birth*</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div style="flex: 1;">
+          <label for="age">Age Group*</label>
+          <input type="text" id="age" name="age-group" required>
+        </div>
+      </div>
+
+      <!-- Parent Info -->
+      <h4 style="margin-top: 30px;">Parent/Guardian Information</h4>
+      <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1;">
+          <label for="guardian-name">Parent/Guardian Name*</label>
+          <input type="text" id="guardian-name" name="guardian-name" required>
+        </div>
+        <div style="flex: 1;">
+          <label for="relationship">Relationship to Student*</label>
+          <input type="text" id="relationship" name="relationship" required>
+        </div>
+        <div style="flex: 1;">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div style="flex: 1;">
+          <label for="phone">Phone Number*</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div style="flex: 1 0 100%;">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address">
+        </div>
+        <div style="flex: 1 0 100%;">
+          <label for="current-school">Current School (if applicable)</label>
+          <input type="text" id="current-school" name="current-school">
+        </div>
+      </div>
+
+      <!-- Program Selection -->
+      <h4 style="margin-top: 30px;">Program Selection</h4>
+      <div class="form-row" style="margin-bottom: 20px;">
+        <label for="program">Program Type (Nursery Only)</label>
+        <select id="program" name="program">
+          <option value="" disabled selected>Select the program type</option>
+          <option value="half-day">Half Day</option>
+          <option value="full-day">Full Day</option>
+        </select>
+      </div>
+
+      <!-- Extra Activities -->
+      <h4>Extra Activities (Select all that apply)</h4>
+      <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+        <label><input type="checkbox" name="activities" value="swimming"> Swimming</label>
+        <label><input type="checkbox" name="activities" value="computers"> Computers</label>
+        <label><input type="checkbox" name="activities" value="potty-training"> Potty Training (for Nursery)</label>
+      </div>
+
+      <!-- Comments -->
+      <div class="form-row" style="margin-bottom: 20px;">
+        <label for="comments">Additional Comments or Questions</label>
+        <textarea id="comments" name="comments" rows="4" style="width: 100%;"></textarea>
+      </div>
+
+      <!-- Confirmation -->
+      <div class="form-row" style="margin-bottom: 20px;">
+        <label>
+          <input type="checkbox" required>
+          I confirm that I have read and understood the registration requirements and fee structure.
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-container" style="text-align: center; margin-top: 30px;">
+        <button type="submit" class="admissions-button">Submit Inquiry</button>
+    </div>
+
+    </form>
+
+    <script>
+  document.getElementById("admissionForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent actual form submission
+    // Optional: Add validation or animation here
+    window.location.href = "thank_you.html"; // Redirect
+  });
+</script>
+
+    </div>
+
+    </div>
+  </div>
+</section>
     <div class="header-card">
         <h1>2025 Fee Structure</h1>
     
@@ -101,48 +225,39 @@
         <!-- Reception Card -->
         <div class="fee-card">
             <h2>Reception</h2>
-            <p>3 - 4 years</p>
+            <p>4 - 5 years</p>
             
             <div class="fee-item">
-                Full Day Only: <span class="fee-amount">P 5400</span>
+                Full Day ONLY: <span class="fee-amount">P 5400</span>
             </div>
             <p class="note">Fees are payable per term</p>
         </div>
-    </div>
-    </div>
+    
 
     <!-- Extra Activities Card -->
-    <div class="activities-card">
-        <h2>Extra Activities (Per Term)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Swimming</th>
-                    <th>Computers</th>
-                    <th>Potty Training</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>P400 once a week</td>
-                    <td>P300 per month</td>
-                    <td>P300 per month</td>
-                
-                </tr>
-            </tbody>
-        </table>
+    
+    <div class="fee-card">
+        <h2>Extra Activities</h2>
+
+        <div class="fee-item">
+                Weekly Swimming Session:<span class="fee-amount">P300</span>
+        </div>
+        <div class="fee-item">
+                Bi-Weekly Swimming Sessions:<span class="fee-amount">P400 </span>
+        </div>
+        <div class="fee-item">
+                Computers: <span class="fee-amount">P400 </span>
+        </div>
+        <div class="fee-item">
+                Potty-Training: <span class="fee-amount">P300</span>
+        </div>
+            <p class="note">Fees are payable per month</p>
+        </div>
     </div>
-    
-
-    
-        
-
-
-    
-        
+                    
+    </div>
     </main>
-
-    <footer>
+ <footer>
         <div class="footer-container">
             <!-- Kindergarten Info -->
             <div class="footer-about">
@@ -155,39 +270,39 @@
                 <h3>Quick Links</h3>
                 <div>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="admission.html">Admissions</a></li>
+                        <li><a href="index.html">Programs</a></li>
+                        <li><a href="about.html">Admissions</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                
                     </ul>
                 </div>
             </div>
-            
-            <!-- Programs -->
-            <div class="footer-column">
-                <h3>Programs</h3>
-                <div>
-                    <ul class="footer-links">
-                        <li><a href="#">Curriculum</a></li>
-                        <li><a href="programs.html">Daily Schedule</a></li>
-                        <li><a href="about.html">Our Teachers</a></li>
-                    </ul>
-                </div>
-            </div>
-            
+
             <!-- Contact Us -->
             <div class="footer-column">
                 <h3>Contact Us</h3>
                 <div id="contact-info">
                     <ul>
-                        <li>Phase 1, Gaborone Botswana</li>
+                        <li>Phase 1, Paje Rd, Gaborone</li>
                         <li>+267 391 6660</li>
-                        <li>pidipidikingerten@gmail.com</li>
+                        <li><a href="mailto:pidipidikindergarten@gmail.com">Email Us</a></li>
                     </ul>
 
                 </div>
             </div>
+            
+            <!-- Programs -->
+            <div class="footer-column">
+                <h3>Hours</h3>
+                <div id="contact-info">
+                    <ul>
+                        <li> Mon - Fri: 7:00 a.m - 5:00p.m</li>
+                        <li> Sat & Sun: Closed</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+
         </div>
         
         <div id="copyright">

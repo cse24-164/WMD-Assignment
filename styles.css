@@ -58,7 +58,7 @@ nav a{
     padding: 5px 10px;
 }
 
-nav a:active{
+nav a.active{
     background-color: #ff4d00;
     color: white;
     border-radius: 5px;
@@ -452,6 +452,8 @@ footer ul li{
     padding: 20px 0;
     margin-top: 40px;
     border-top: 1px solid #ddd;
+    text-transform: uppercase;
+    font-size: 0.8em;
 }
 
 /* Back to top button */
@@ -503,21 +505,6 @@ footer ul li{
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto 40px;
-}
-
-/* Replace bullets with footprint emoji */
-.about-approach ul {
-  list-style-type:circle; 
-  padding-left: 1em; /* Adjust indentation */
-}
-
-.about-approach li::before {
-    margin-right: 0.5em;
-}
-
-/* Adjust spacing */
-.about-approach li {
-    margin-bottom: 0.8em;
 }
 
 /* Staff Section Styles */
@@ -787,36 +774,92 @@ footer ul li{
             font-size: 0.9em;
         }
 
-        .divider {
-            border-top: 1px dashed #ddd;
-            margin: 20px 0;
-        }
+        /* === Form Container === */
+.admissions-form-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-        .activities-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 25px;
-            margin-right: 5%;
-            margin-left: 5%;
-        }
+/* === Headings === */
+.admissions-form-section h2,
+.admissions-form-section h4 {
+  margin-bottom: 20px;
+  color: #333;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
+/* === Labels and Inputs === */
+.admissions-form-section label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
 
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
+.admissions-form-section input[type="text"],
+.admissions-form-section input[type="email"],
+.admissions-form-section input[type="tel"],
+.admissions-form-section input[type="date"],
+.admissions-form-section input[type="number"],
+.admissions-form-section textarea,
+.admissions-form-section select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
 
-        th {
-            background-color: #f8f9fa;
-        }
+/* === Form Row Layout === */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row > div {
+  flex: 1 1 45%;
+}
+
+/* === Textarea Full Width === */
+.admissions-form-section textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* === Checkbox Group === */
+.admissions-form-section .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+/* === Confirmation Box === */
+.admissions-form-section .confirmation {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* === Submit Button Centered === */
+.admissions-form-section .submit-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+    
+
         
+
 /* Contact Page Contact Form Section */
         .contact-container {
             display: grid;
@@ -1096,6 +1139,15 @@ footer ul li{
         width: 100%;
         position: static;
     }
+
+    .programs-image img{
+        height: auto;
+        min-height: unset;
+        width: 100%;
+        position: static;
+    }
+
+
 
 
     /*Card Layouts*/
