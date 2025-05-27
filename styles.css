@@ -682,6 +682,7 @@ footer h3{
             margin: 0;
         }
 
+
     /* Daily Schedule*/
 
     .schedule-card {
@@ -832,6 +833,8 @@ footer h3{
             font-size: 0.9em;
         }
 
+
+
         /* === Form Container === */
 .admissions-form-section {
   max-width: 900px;
@@ -913,6 +916,7 @@ footer h3{
   text-align: center;
   margin-top: 30px;
 }
+
 
     
 
@@ -1074,6 +1078,7 @@ footer h3{
             margin-bottom: 15px;
             font-size: 0.9rem;
         }
+
 
 /* Mobile Responsiveness*/
 
