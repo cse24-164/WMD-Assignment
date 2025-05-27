@@ -1138,7 +1138,16 @@ footer h3{
         max-height: 0;
         overflow: hidden;
         transition: 0.3s ease;
+        padding: 20px
 
+    }
+
+    .nav-register-btn{
+        display: block !important;
+        margin: 20px auto 10px;
+        width: 80%;
+        text-align: center;
+        padding: 10px 15px;
     }
     
     nav ul.show {
