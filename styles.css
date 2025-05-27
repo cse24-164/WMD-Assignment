@@ -1090,7 +1090,7 @@ footer h3{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1023px) {
     .menu-toggle {
         display: block;
         z-index: 101;
@@ -1367,10 +1367,126 @@ footer h3{
     }
 }
 
-
-@media (max-width: 1024px) {
+* Tablet (Landscape) - 1024px to 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    /* Header Adjustments */
+    header {
+        padding: 15px 3%;
+    }
+    
+    .pidipidi-logo {
+        font-size: 1.3rem;
+    }
+    
+    nav li {
+        margin-left: 15px;
+    }
+    
+    .nav-register-btn {
+        padding: 5px 12px;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Section */
+    .section-one-content {
+        padding: 40px 3%;
+    }
+    
+    .section-one-text {
+        padding: 0 30px;
+    }
+    
+    /* Cards Layout */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    /* Staff Grid */
     .staff-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Programs Section */
+    .programs-content {
+        padding: 0 3%;
+    }
+    
+    .programs-text {
+        padding-right: 30px;
+    }
+    
+    /* Contact Form */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials */
+    .testimonials-section {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    /* Form Adjustments */
+    .admissions-form-section {
+        padding: 30px;
+    }
+    
+    .form-row > div {
+        flex: 1 1 100%;
+    }
+    
+    /* Button Sizes */
+    .buttons a, 
+    .admissions-button, 
+    .contact-button {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Fee Cards */
+    .fee-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Image Containers */
+    .hero-image, 
+    .programs-image {
+        height: 70vh;
+    }
+    
+    /* Navigation Active State */
+    nav a.active::after {
+        bottom: -3px;
+        height: 2px;
+    }
+    
+    /* Schedule Table */
+    .time-block {
+        flex-direction: row;
+    }
+    
+    .time {
+        min-width: 100px;
     }
 }
 
