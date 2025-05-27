@@ -1105,7 +1105,7 @@ footer h3{
       font-size: 1.0rem;
     }
 
-    .buttons, .action-buttons {
+    .buttons, .action-buttons, .admissions-button, .contact-button {
         flex-direction: column;  /* stack buttons vertically */
         gap: 12px;               /* less gap vertically */
         margin-top: 20px;
