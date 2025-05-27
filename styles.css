@@ -480,6 +480,7 @@ footer h3{
 
 .footer-contact-info {
     line-height: 1.6;
+
 }
 
 .contact-info p {
@@ -492,12 +493,12 @@ footer h3{
 }
 
 .footer-links,
-#contact-info {
+.footer-contact-info {
     padding-left: 0; 
     list-style: none;
 }
 
-#contact-info ul {
+.footer-contact-info ul {
     padding-left: 0;  
     margin-left: 0;  
 }
