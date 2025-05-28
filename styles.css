@@ -506,12 +506,12 @@ footer h3{
 
 
 #copyright{
-    text-align: center;
     padding: 20px 0;
     margin-top: 40px;
     border-top: 1px solid #ddd;
     text-transform: uppercase;
     font-size: 0.8em;
+    text-align: center;
 }
 
 /* Back to top button */
@@ -1367,7 +1367,7 @@ footer h3{
     }
 }
 
-* Tablet (Landscape) - 1024px to 1279px */
+/* Tablet (Landscape) - 1024px to 1279px */
 @media (min-width: 1024px) and (max-width: 1279px) {
     /* Header Adjustments */
     header {
@@ -1377,14 +1377,32 @@ footer h3{
     .pidipidi-logo {
         font-size: 1.3rem;
     }
+
+    .pidipidi-logo .kindergarten{
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+    flex-wrap: wrap;
+   }
+
     
     nav li {
-        margin-left: 15px;
+        margin-left: 10px;
+        padding: 10px 0;
     }
+
+    nav a {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+    white-space: nowrap;
+    }
+  
     
     .nav-register-btn {
-        padding: 5px 12px;
-        font-size: 0.9rem;
+        margin-left: 10px;
+        padding: 3px 10px;
+        font-size: 0.85rem;
     }
     
     /* Hero Section */
